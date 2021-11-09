@@ -1,15 +1,21 @@
 <template>
   <div class="container">
-      <h1></h1>
+      <button v-on:click="generate()" >
+        <h1>{{deal.title}}</h1>
+      </button>
   </div>
 </template>
 
 <script>
 export default {
     name: 'HomeComp',
-    //props: ['pokemon'], ///remind Whalen later to play around with the props - change from array to a string or object
-
+    props: ["deals"],
     ///computed Property == 
+    methods: {
+      generate() {
+        console.log("completed" + this.deals )
+      }
+    }
 }
 </script>
 

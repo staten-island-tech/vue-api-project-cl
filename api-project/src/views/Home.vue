@@ -1,21 +1,26 @@
 <template>
   <div class="home">
-    <HomeComp />
+    <!-- <HomeComp v-for="item in array" :key="item" :item="deal" /> -->
+    <div class="container">
+      <button v-on:click="generate()" v-for="item in array" :key="item.title" >
+        <h1>{{ item }}</h1>
+      </button>
+  </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HomeComp from '@/components/HomeComp.vue';
+// import HomeComp from '@/components/HomeComp.vue';
 
 export default {
   name: 'Home',
   components: {
-    HomeComp,
+    // HomeComp,
   },
   data () {
     return {
-      dndArray: [], ///array
+      array: [], ///array
     };
   },
   created: function () {
@@ -26,10 +31,10 @@ export default {
       try {
         const response = await fetch (
           ////api link
-          'www.dnd5eapi.co/api/'
+          'https://www.cheapshark.com/api/1.0/deals'
         ); //link to the api 
         const data = await response.json(); // grabs the data (i'm guessing)
-        this.dndArray = data.results; //push data into array (?)
+        this.array = data.results; //push data into array (?)
         console.log(data);
       } catch (error) {
         console.log(error)

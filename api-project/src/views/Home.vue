@@ -1,26 +1,23 @@
 <template>
   <div class="home">
-    <!-- <HomeComp v-for="item in array" :key="item" :item="deal" /> -->
-    <div class="container">
-      <button v-on:click="generate()" v-for="item in array" :key="item.title" >
-        <h1>{{ item }}</h1>
-      </button>
+    <HomeComp v-for="title in studioGibArray" :key="title" :title="title" />
+    
   </div>
-  </div>
+
 </template>
 
 <script>
 // @ is an alias to /src
-// import HomeComp from '@/components/HomeComp.vue';
+import HomeComp from '@/components/HomeComp.vue';
 
 export default {
   name: 'Home',
   components: {
-    // HomeComp,
+    HomeComp,
   },
   data () {
     return {
-      array: [], ///array
+      studioGibArray: [], ///array
     };
   },
   created: function () {
@@ -31,11 +28,12 @@ export default {
       try {
         const response = await fetch (
           ////api link
-          'https://www.cheapshark.com/api/1.0/deals'
+          'https://ghibliapi.herokuapp.com/films'
         ); //link to the api 
         const data = await response.json(); // grabs the data (i'm guessing)
-        this.array = data.results; //push data into array (?)
-        console.log(data);
+        this.studioGibArray = data; //push data into array (?)
+        // console.log(data);
+        console.log(this.studioGibArray);
       } catch (error) {
         console.log(error)
       }

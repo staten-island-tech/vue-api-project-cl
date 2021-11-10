@@ -1,15 +1,13 @@
 <template>
   <div class="container">
-      <button v-on:click="generate()" >
-        <h1>{{deal.title}}</h1>
-      </button>
+    <h1>{{title.title}}</h1>
   </div>
 </template>
 
 <script>
 export default {
     name: 'HomeComp',
-    props: ["deals"],
+    props: ["title"],
     ///computed Property == 
     methods: {
       generate() {

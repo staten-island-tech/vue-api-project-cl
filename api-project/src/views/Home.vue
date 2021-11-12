@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+
     <HomeComp v-for="title in studioGibArray" :key="title" :title="title" />
     
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
 
-    <HomeComp v-for="title in studioGibArray" :key="title" :title="title" />
+    <MovieCard v-for="mCard in studioGibArray" :key="mCard" :mCard="mCard" />
     
   </div>
 
@@ -9,12 +9,12 @@
 
 <script>
 // @ is an alias to /src
-import HomeComp from '@/components/HomeComp.vue';
+import MovieCard from '@/components/MovieCard.vue';
 
 export default {
   name: 'Home',
   components: {
-    HomeComp,
+    MovieCard,
   },
   data () {
     return {

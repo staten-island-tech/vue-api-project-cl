@@ -1,17 +1,13 @@
 <template>
-  <div class="container">
+    <section class="MovieCard-Comp" >
+      <div class="text">
+        <h1 id="font title">{{mCard.title}}</h1>
+        <h1 id="font original-title">{{mCard.original_title}}</h1>
+        <h1 id="font original-title-romanised">{{mCard.original_title_romanised}}</h1>
+      </div>
 
-    <section id="card" class="flex">
-      <div class="cover" >
-      </div><!-- End of id="card" -->
-      <div class="text ">
-          <h1 id="title">{{mCard.director}}</h1>
-          <h1 id="original-title">{{mCard.original_title}}</h1>
-      </div> <!-- end of id="text" -->
-      
     </section> <!-- end of id="card" -->
 
-  </div>
 
 </template>
 
@@ -20,27 +16,19 @@ export default {
     name: 'MovieCard',
     props: ["mCard"],
 
-    methods: {
-      generate() {
-        console.log(`yes`)
-      },
-    }
 }
 </script>
 
 <style scoped>
-.flex {
-  display: flex;
+* {
+  margin: 0;
+  font-size: 1.5rem ;
 }
-
-#card {
-  justify-content: center;
+.MovieCard-Comp {
+  width: 15rem;
+  height: 20rem;
   background-color: grey;
-  width: 50rem;
-  margin: 1rem  ;
-  
-}
-.cover {
-  /* background-image: url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg); */
+  /* padding: 1rem; */
+  margin: 0.5rem;
 }
 </style>

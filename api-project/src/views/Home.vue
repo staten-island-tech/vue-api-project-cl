@@ -1,7 +1,7 @@
 <template>
   <div class="home">
 
-    <MovieCard v-for="mCard in studioGibArray" :key="mCard" :mCard="mCard" />
+    <MovieCard v-for="movieCard in studioGibArray" :key="movieCard" :mCard="movieCard" />
     
   </div>
 
@@ -18,7 +18,8 @@ export default {
   },
   data () {
     return {
-      studioGibArray: [], ///array
+      studioGibArray: [''], ///array
+      cover: [''], ///array
     };
   },
   created: function () {
@@ -39,6 +40,7 @@ export default {
         console.log(error)
       }
     },
+
   }
 }
 </script>

@@ -1,9 +1,11 @@
 <template>
-  <div class="home">
-
-    <MovieCard v-for="movieCard in studioGibArray" :key="movieCard" :mCard="movieCard" />
+  <section class="home">
+    <div class="movie flex">
+      <MovieCard v-for="movieCard in studioGibArray" :key="movieCard" :mCard="movieCard" />
     
-  </div>
+    </div>
+    
+  </section>
 
 </template>
 
@@ -19,7 +21,6 @@ export default {
   data () {
     return {
       studioGibArray: [''], ///array
-      cover: [''], ///array
     };
   },
   created: function () {
@@ -36,6 +37,7 @@ export default {
         this.studioGibArray = data; //push data into array (?)
         // console.log(data);
         console.log(this.studioGibArray);
+        
       } catch (error) {
         console.log(error)
       }
@@ -44,3 +46,17 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.home{
+  width: 100rem;
+}
+.movie{
+  width: 70%;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+</style>

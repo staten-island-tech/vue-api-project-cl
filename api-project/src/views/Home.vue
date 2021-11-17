@@ -1,9 +1,15 @@
 <template>
-  <section class="home">
-    <div class="movie flex">
-      <MovieCard v-for="movieCard in studioGibArray" :key="movieCard" :mCard="movieCard" />
-    
+  <section class="home ">
+    <div id="banner">
+      <Banner/>
     </div>
+
+    <div id="movie" class="flex-center">
+      <div class="movie-card flex-row-wrap flex-center">
+        <MovieCard v-for="movieCard in studioGibArray" :key="movieCard" :mCard="movieCard" />
+        
+      </div>
+    </div> <!-- movie end -->
     
   </section>
 
@@ -12,11 +18,13 @@
 <script>
 // @ is an alias to /src
 import MovieCard from '@/components/MovieCard.vue';
+import Banner from '@/components/Banner.vue';
 
 export default {
   name: 'Home',
   components: {
     MovieCard,
+    Banner,
   },
   data () {
     return {
@@ -48,15 +56,29 @@ export default {
 </script>
 
 <style scoped>
-.home{
-  width: 100rem;
+.flex-center {
+  display: flex;
+  justify-content: center;
 }
-.movie{
-  width: 70%;
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
 }
-.flex {
+.flex-row-wrap {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.home{
+  max-width: 100rem;
+  background-color: grey;
+}
+
+.movie-card {
+  background-color: whitesmoke;
+  width: 80%;
+}
+
+
 </style>

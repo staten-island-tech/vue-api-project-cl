@@ -1,7 +1,7 @@
 <template>
     <section id="MovieCard-Comp" class="flex" >
-      <div class="text flex-col">
-        
+
+      <div class="text flex-col hover">
         <h1 id="font original-title">{{mCard.original_title}}</h1>
         <h1 id="font original-title-romanised">{{mCard.original_title_romanised}}</h1>
         <h1 id="font title">{{mCard.title}}</h1>
@@ -41,11 +41,13 @@ export default {
 }
 
 #MovieCard-Comp {
-  width: 15rem;
+  width: 14.25rem;
   height: 20rem;
   background-color: grey;
   /* padding: 1rem; */
   margin: 0.5rem;
+  background-size: cover;
+  background-image: url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/mikKSEdk5kLhflWXbp4S5mmHsDo.jpg);
 }
 .text {
   display: flex;

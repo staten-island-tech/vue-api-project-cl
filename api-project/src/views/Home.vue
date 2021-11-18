@@ -20,6 +20,7 @@
 import MovieCard from '@/components/MovieCard.vue';
 import Banner from '@/components/Banner.vue';
 
+
 export default {
   name: 'Home',
   components: {
@@ -59,10 +60,7 @@ export default {
 .flex-center {
   display: flex;
   justify-content: center;
-}
-.flex-start {
-  display: flex;
-  justify-content: flex-start;
+  align-content: center;
 }
 .flex-row-wrap {
   display: flex;
@@ -72,9 +70,16 @@ export default {
 
 .home{
   max-width: 100rem;
+  width: 100%;
   background-color: grey;
+  
+  margin: 0 auto;
+  padding: 0;
 }
 
+#movie {
+  width: 100%;
+}
 .movie-card {
   background-color: whitesmoke;
   width: 80%;

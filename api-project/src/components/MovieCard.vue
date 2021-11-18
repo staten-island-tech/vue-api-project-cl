@@ -41,8 +41,8 @@ export default {
 }
 
 #MovieCard-Comp {
-  width: 14.25rem;
-  height: 20rem;
+  width: 12rem;
+  height: 18rem;
   background-color: grey;
   /* padding: 1rem; */
   margin: 0.5rem;

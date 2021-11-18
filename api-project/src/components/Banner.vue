@@ -17,12 +17,14 @@ export default {
 #Banner {
     width: 100%;
     height: 50rem;
-    
+    display: flex;
 }
 .main {
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
     background-image: url(https://image.tmdb.org/t/p/original/etqr6fOOCXQOgwrQXaKwenTSuzx.jpg);
     
 }

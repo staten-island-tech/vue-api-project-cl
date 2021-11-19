@@ -23,7 +23,7 @@
   text-decoration: none;
   color: black;
 
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .nav-text:hover {
   color: antiquewhite;

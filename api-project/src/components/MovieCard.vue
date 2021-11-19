@@ -1,10 +1,10 @@
 <template>
-    <section id="MovieCard-Comp" class="flex" >
-
-      <div class="text flex-col hover">
-        <h1 id="font original-title">{{mCard.original_title}}</h1>
-        <h1 id="font original-title-romanised">{{mCard.original_title_romanised}}</h1>
-        <h1 id="font title">{{mCard.title}}</h1>
+    <section id="MovieCard-Comp" class="flex-col">
+      <img src="path + '/images/'+ mCard.image" alt="" class="movie-img">
+      <div class="text  hover">
+        <h1 class="font original-title">{{mCard.original_title}}</h1>
+        <h1 class="font original-title-romanised">{{mCard.original_title_romanised}}</h1>
+        <h1 class="font eng-title">{{mCard.title}}</h1>
         
       </div>
 
@@ -25,6 +25,7 @@ export default {
     created() {
       this.cover = this.mCard.image;
       console.log(this.cover)
+      console.log(this.mCard)
     },
 
 }
@@ -33,24 +34,43 @@ export default {
 <style scoped>
 * {
   margin: 0;
-  font-size: 1.5rem ;
 
 }
-.flex {
+.flex-col {
   display: flex;
+  flex-direction: column;
+
 }
 
 #MovieCard-Comp {
   width: 12rem;
-  height: 18rem;
-  background-color: grey;
-  /* padding: 1rem; */
-  margin: 0.5rem;
+  height: auto;
+
+  
+  margin: 1rem 0.5rem;
   background-size: cover;
-  background-image: url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/mikKSEdk5kLhflWXbp4S5mmHsDo.jpg);
+}
+
+.movie-img{
+  width: 12rem;
+  height: 18rem;
+  background-color: rgb(133, 123, 111);
 }
 .text {
   display: flex;
   flex-direction: column-reverse;
+  color: rgb(196, 196, 196);
+}
+.font {
+  font-size: 1.5rem;
+}
+.original-title-romanised {
+  font-size: 1.1rem;
+}
+.original-title {
+  
+}
+.eng-title {
+
 }
 </style>

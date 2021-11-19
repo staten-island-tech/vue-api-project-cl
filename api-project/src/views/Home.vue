@@ -1,7 +1,7 @@
 <template>
   <section class="home ">
     <div id="banner">
-      <Banner/>
+      <!-- <Banner/> -->
     </div>
 
     <div id="movie" class="flex-center">
@@ -18,14 +18,14 @@
 <script>
 // @ is an alias to /src
 import MovieCard from '@/components/MovieCard.vue';
-import Banner from '@/components/Banner.vue';
+//import Banner from '@/components/Banner.vue';
 
 
 export default {
   name: 'Home',
   components: {
     MovieCard,
-    Banner,
+    //Banner,
   },
   data () {
     return {
@@ -71,7 +71,7 @@ export default {
 .home{
   max-width: 100rem;
   width: 100%;
-  background-color: grey;
+
   
   margin: 0 auto;
   padding: 0;
@@ -81,7 +81,7 @@ export default {
   width: 100%;
 }
 .movie-card {
-  background-color: whitesmoke;
+  background-color: hsla(0, 0%, 0%, 0.801);
   width: 80%;
 }
 

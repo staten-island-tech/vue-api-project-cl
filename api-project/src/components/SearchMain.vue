@@ -1,6 +1,6 @@
 <template>
   <section id="search">
-      
+     <input type="text" placeholder="Insert"> 
   </section>
 </template>
 

@@ -1,6 +1,7 @@
 <template>
     <section id="MovieCard-Comp" class="flex-col">
-      <img src="path + '/images/'+ mCard.image" alt="" class="movie-img">
+      <img :src="mCard.image" alt="" class="movie-img">
+
       <div class="text  hover">
         <h1 class="font original-title">{{mCard.original_title}}</h1>
         <h1 class="font original-title-romanised">{{mCard.original_title_romanised}}</h1>
@@ -17,16 +18,9 @@
 export default {
     name: 'MovieCard',
     props: ["mCard"],
-    data () {
-      return {
-        cover: [``],
-      };
-    },
-    created() {
-      this.cover = this.mCard.image;
-      console.log(this.cover)
-      console.log(this.mCard)
-    },
+    // created() {
+    //   console.log(this.mCard)
+    // },
 
 }
 </script>
@@ -54,23 +48,24 @@ export default {
 .movie-img{
   width: 12rem;
   height: 18rem;
-  background-color: rgb(133, 123, 111);
+  background-color: rgb(199, 190, 190);
 }
 .text {
   display: flex;
   flex-direction: column-reverse;
-  color: rgb(196, 196, 196);
+  color: rgb(241, 225, 214);
+  padding: .5rem 0;
 }
 .font {
   font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.75rem;
 }
 .original-title-romanised {
   font-size: 1.1rem;
+  line-height: 1.3rem;
+  font-weight: 200;
+  padding: 0.2rem 0 ;
 }
-.original-title {
-  
-}
-.eng-title {
 
-}
 </style>

@@ -85,7 +85,7 @@ export default {
   width: 100%;
 }
 .movie-card {
-  background-color: hsla(0, 0%, 0%, 0.801);
+  background-color: rgb(182, 83, 83);
   width: 80%;
 }
 

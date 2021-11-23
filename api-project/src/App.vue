@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link class="nav-text" to="/">Movie</router-link>
-      <router-link class="nav-text" to="/search">Search</router-link>
-      <router-link class="nav-text" to="/about">About</router-link>
+      <router-link class="nav-text" to="/">Movie</router-link> |
+      <router-link class="nav-text" to="/search">Search</router-link> |
+      <router-link class="nav-text" to="/about">About</router-link> |
     </div>
     <router-view/>
   </div>
@@ -19,13 +19,15 @@
 }
 #nav {
   width: 100%;
-  background-color: grey;
+  background-color: rgb(0, 0, 0);
   font-weight: 400;
+
+  padding: 2rem 5rem;
 }
 .nav-text {
-  margin: 0 0.5rem 0 0.5rem;
+  margin: 0 2rem;
   text-decoration: none;
-  color: black;
+  color: white;
 
   font-size: 1.25rem;
 }

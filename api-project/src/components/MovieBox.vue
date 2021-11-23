@@ -10,9 +10,14 @@
 export default {
     name: 'MovieBox',
     props: ["mBox"],
-    created() {
+    data() {
+        return {
 
+        }
+    },
+    created() {
     }
+
 }
 </script>
 

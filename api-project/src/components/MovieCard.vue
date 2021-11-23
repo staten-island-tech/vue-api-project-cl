@@ -25,9 +25,9 @@ export default {
           engTitle:[],
         }
     },
-    // created() {
-    //   console.log(this.mCard)
-    // },
+    created() {
+      console.log(this.mCard)
+    },
 
 }
 </script>

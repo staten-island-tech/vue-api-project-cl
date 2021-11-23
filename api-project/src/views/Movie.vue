@@ -6,7 +6,10 @@
 
     <div id="movie" class="flex-center">
       <div class="movie-card flex-row-wrap flex-center">
-        <MovieCard v-for="movieCard in studioGibArray" :key="movieCard" :mCard="movieCard" />
+        <MovieCard v-for="movieCard in studioGibArray" 
+          :key="movieCard" 
+          :mCard="movieCard" 
+          />
         
       </div>
     </div> <!-- movie end -->
@@ -34,6 +37,7 @@ export default {
   },
   created: function () {
     this.fetchData();
+    
   },
   methods: {
     fetchData: async function () {
@@ -71,8 +75,6 @@ export default {
 .home{
   max-width: 100rem;
   width: 100%;
-
-  
   margin: 0 auto;
   padding: 0;
 }
@@ -81,7 +83,7 @@ export default {
   width: 100%;
 }
 .movie-card {
-  background-color: hsla(0, 0%, 0%, 0.801);
+  background-color: black;
   width: 80%;
 }
 

@@ -21,6 +21,7 @@
 <script>
 // @ is an alias to /src
 import MovieCard from '@/components/MovieCard.vue';
+import Main from '@/components/MovieCard.vue';
 //import Banner from '@/components/Banner.vue';
 
 
@@ -33,11 +34,12 @@ export default {
   data () {
     return {
       studioGibArray: [''], ///array
+      Main
     };
   },
   created: function () {
     this.fetchData();
-    
+    console.log(this.Main.clicked)
   },
   methods: {
     fetchData: async function () {
@@ -56,11 +58,20 @@ export default {
       }
     },
 
+
   }
 }
 </script>
 
 <style scoped>
+.none {
+  display: none;
+}
+
+.display {
+
+}
+
 .flex-center {
   display: flex;
   justify-content: center;

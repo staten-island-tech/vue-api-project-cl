@@ -1,15 +1,17 @@
 <template>
   <section>
-    <SearchMain />
+    <h1>There's Something.</h1>
+    <p>It's Words! </p>
+    <p>It;s A Phrase!</p>
+    <p>I saw a spider...</p>
   </section>
 </template>
 
 <script>
-import SearchMain from '@/components/SearchMain.vue';
 export default {
   name: 'About',
   components: {
-    SearchMain
+    
   },
 }
 </script>

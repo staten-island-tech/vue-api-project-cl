@@ -27,6 +27,11 @@
          </p>
        </div> <!-- end of text-sub -->
 
+       <div class="url flex-col-center">
+         <h3 class="api-url">API Url (It's not an "a" tag)</h3>
+         <h3 class="api-url"> {{mTitle.url}}</h3>
+       </div>
+
      </div> <!-- end of box-container -->
   </section>
 </template>
@@ -43,6 +48,12 @@ export default {
 .flex-row {
   display: flex;
   flex-direction: row;
+}
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #search {
   display: flex;
@@ -96,5 +107,20 @@ export default {
 .description {
   font-size: 1.5rem;
   font-weight: 200;
+}
+
+.url{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  min-width: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(252, 239, 253, 0.795);
+}
+.api-url  {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <section class="search">
     <div class="movie-box ">
-      <div class="input-nav" >
+      <!-- <div class="input-nav" >
         <input class="input" v-model="search" type="text" placeholder="Movie Title English">
-      </div>
+      </div> -->
       <div class="temp">
         <SearchMain v-for="title in filterArray" 
         :key="title" 

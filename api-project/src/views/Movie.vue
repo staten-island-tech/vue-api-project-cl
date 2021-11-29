@@ -1,45 +1,32 @@
 <template>
-  <section class="home ">
-    <div id="banner">
-      <!-- <Banner/> -->
-    </div>
-
-    <div id="movie" class="flex-center">
+  <section class="home display">
+    <div id="movie" class="flex-col">
       <div class="movie-card flex-row-wrap flex-center">
         <MovieCard v-for="movieCard in studioGibArray" 
           :key="movieCard" 
           :mCard="movieCard" 
           />
-        
       </div>
     </div> <!-- movie end -->
-    
   </section>
-
 </template>
 
 <script>
 // @ is an alias to /src
 import MovieCard from '@/components/MovieCard.vue';
-import Main from '@/components/MovieCard.vue';
-//import Banner from '@/components/Banner.vue';
-
 
 export default {
   name: 'Home',
   components: {
     MovieCard,
-    //Banner,
   },
   data () {
     return {
       studioGibArray: [''], ///array
-      Main
     };
   },
   created: function () {
     this.fetchData();
-    console.log(this.Main.clicked)
   },
   methods: {
     fetchData: async function () {
@@ -57,9 +44,7 @@ export default {
         console.log(error)
       }
     },
-
-
-  }
+  },
 }
 </script>
 
@@ -69,7 +54,7 @@ export default {
 }
 
 .display {
-
+  display: inline-block;
 }
 
 .flex-center {
@@ -82,9 +67,13 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
 
 .home{
-  max-width: 100rem;
+  width: 100%;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -95,8 +84,9 @@ export default {
 }
 .movie-card {
   background-color: black;
-  width: 80%;
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
 }
-
 
 </style>

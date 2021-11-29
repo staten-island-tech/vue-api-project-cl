@@ -60,7 +60,7 @@ export default {
         this.Main.apiUrl = this.mCard.url
         console.log(this.Main)
       },
-      
+
       changeCard2() {
         if (this.Main.clicked === false) {
           this.Main.clicked = true

@@ -1,9 +1,8 @@
 <template>
   <section class="search">
-    <div class="movie-box flex-center">
+    <div class="movie-box ">
       <div class="input-nav" >
         <input class="input" v-model="search" type="text" placeholder="Movie Title English">
-        <button v-on:click="temp">ss</button>
       </div>
       <div class="temp">
         <SearchMain v-for="title in filterArray" 
@@ -51,11 +50,6 @@ export default {
       }
     },
 
-    temp() {
-      console.log(this.search, "donde")
-    }
-
-
   },
   computed: {
       filterTitle () {
@@ -79,14 +73,23 @@ export default {
 </script>
 
 <style scoped>
+.search {
+  width: 100%;
+  margin: auto;
+}
+
+.input-nav{
+  display: flex;
+  justify-content: center;
+}
 .input {
   border: 0.5px solid black;
-  width: 10rem;
-  height: 1.5rem;
+  width: 20rem;
+  height: 2rem;
 
   margin: 1rem;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
 
 }
 

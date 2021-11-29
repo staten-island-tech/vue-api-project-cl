@@ -1,16 +1,23 @@
 <template>
   <section id="search">
-     <div class="box-container" :style={}>
+     <div class="box-container" :style="{backgroundImage:`url(${mTitle.movie_banner})`}">
 
-       <div class="text-main" >
-         <div class="titles">
-          <h1 class="title-eng">{{mTitle.title}}</h1>
-          <h1 class="title-rom">{{mTitle.original_title_romanised}}</h1>
-          <h1 class="title-orig">{{mTitle.original_title}}</h1>
-         </div> <!-- end of title -->
-         <div class="people">
-           <h2 class="director">Director: {{mTitle.director}}</h2>
-           <h2 class="producer">Producer(s): {{mTitle.producer}}</h2>
+       <div class="text-main flex-row" >
+         <div class="left">
+           <div class="titles">
+              <h1 class="title-font title-eng">{{mTitle.title}}</h1>
+              <h1 class="title-font title-rom">{{mTitle.original_title_romanised}}</h1>
+              <h1 class="title-font title-orig">{{mTitle.original_title}}</h1>
+            </div> <!-- end of title -->
+         </div>
+
+         <div class="right">
+          <div class="people">
+            <h2 class="people-font director">Director: {{mTitle.director}}</h2>
+            <h2 class="people-font producer">Producer(s): {{mTitle.producer}}</h2>
+            <h3 class="time-font time">Watch Time: {{mTitle.running_time}} minutes</h3>
+            <h3 class="time-font rekease">Released in {{mTitle.release_date}}</h3>
+          </div><!-- end of people -->
          </div>
        </div> <!-- end of text-main -->
 
@@ -29,37 +36,65 @@
 export default {
     name: "SearchMain",
     props: ["mTitle"],
-    components: {
-
-  },
 }
 </script>
 
 <style>
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
 #search {
   display: flex;
   justify-content: center;
+  
+  margin: auto;
+  color: white;
+  margin: 1.5rem 0;
 }
 
 .box-container {
   max-width: 50rem;
   border: solid 1px black;
+  padding: 1.5rem ;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .text-main {
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 1rem;
+  padding: 1rem;
 }
-.titles {
-  background-color: grey;
+.title-font {
+  font-size: 1.5rem;
 }
-.people {
-  background-color: whitesmoke;
+.left{
+  width: 60%;
+  padding-right: 1rem;
 }
 
 .text-sub {
-  background-color: blue;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 1rem;
+  padding: 1.5rem;
 }
+.people-font {
+  font-size: 1rem;
+  font-weight: 400;
+
+  color: rgb(224, 211, 211);
+}
+.time-font {
+  font-size: 1rem;
+  font-weight: 400;
+
+  color: rgb(185, 211, 178);
+}
+
 .description {
-  background-color: wheat;
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 </style>
